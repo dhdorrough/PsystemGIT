@@ -1,0 +1,15 @@
+unit CSVStuff;
+
+interface
+
+const
+  FN_UNITNUMBER = 0;
+  FN_VOLUMENAME = 1;
+  FN_DOSFILEPATH = 2;
+  FN_PARENTUNITNUMBER = 3;
+  FN_VOLSTARTBLOCKINPARENT = 4;
+  FN_NONSTANDARDVOLUME = 5;
+
+implementation
+
+end.

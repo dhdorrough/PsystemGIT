@@ -1,0 +1,107 @@
+program Filer_Debugger;
+
+{%File '..\..\FastMM\FastMM4Options.inc'}
+{%File '..\Debugger\PDefines.inc'}
+{%File '..\VisDiffStable.bat'}
+{%File 'BiosConst.inc'}
+{%File '..\..\CompareVersions\Compare.dpr'}
+{%File '..\Listings\V4.0\PME-debug.txt'}
+
+uses
+  FastMM4 in '..\..\FastMM\FastMM4.pas',
+  Forms,
+  FilerMain in 'FilerMain.pas' {frmFiler},
+  PsysUnit in 'PsysUnit.pas',
+  MyUtils in '..\..\MyUtils\MyUtils.pas',
+  UCSDGlob in 'UCSDGlob.pas',
+  CrtWindow in 'CrtWindow.pas' {frmCrtWindow},
+  pSys_Decl in 'pSys_Decl.pas',
+  RenameFile in 'RenameFile.pas' {frmRenameFile},
+  ShowConfig in 'ShowConfig.pas',
+  SettingsFiles in '..\..\MyUtils\SettingsFiles.pas',
+  GetBlockParams in 'GetBlockParams.pas' {frmBlockParams},
+  MyDelimitedParser in '..\..\MyUtils\MyDelimitedParser.pas',
+  SearchForString in 'SearchForString.pas' {frmSearchForString},
+  Search_Decl in '..\..\MyUtils\Search_Decl.pas',
+  Misc in 'Misc.pas',
+  BitOps in '..\..\MyUtils\BitOps.pas',
+  MyTables_Decl in '..\..\MyUtils\MyTables_Decl.pas',
+  MyTables in '..\..\MyUtils\MyTables.pas',
+  uGetString in '..\..\MyUtils\uGetString.pas' {frmGetString},
+  OpsTables in 'OpsTables.pas',
+  Interp_Decl in 'Interp_Decl.pas',
+  LocalVariables in '..\Debugger\LocalVariables.pas' {frmLocalVariables},
+  uWatchInfo in '..\Debugger\uWatchInfo.pas' {frmWatchInfo},
+  Watch in '..\Debugger\Watch.pas' {frmWatch},
+  Debug_Decl in '..\Debugger\Debug_Decl.pas',
+  Inspector in '..\Debugger\Inspector.pas' {frmInspect},
+  BreakPointInfo in '..\Debugger\BreakPointInfo.pas' {frmBreakPointInfo},
+  pCodeDebugger in '..\Debugger\pCodeDebugger.pas' {frmPCodeDebugger},
+  InterpIV in 'InterpIV.pas',
+  SegmentProcname in 'SegmentProcname.pas' {frmSegmentProcName},
+  ListingUtils in '..\Debugger\ListingUtils.pas',
+  Watch_Decl in '..\Debugger\Watch_Decl.pas',
+  RawFileParams in '..\..\MyUtils\RawFileParams.pas' {frmRawParameters},
+  pSysDatesAndTimes in 'pSysDatesAndTimes.pas',
+  DumpAddr in 'DumpAddr.pas' {frmDumpAddr},
+  DbDbUtils in '..\Debugger\DbDbUtils.pas',
+  DatabaseParams in '..\Debugger\DatabaseParams.pas' {frmDatabaseParams},
+  UCSDglbu in 'UCSDglbu.pas',
+  pSysVolumes in 'pSysVolumes.pas',
+  pSysDrivers in 'pSysDrivers.pas',
+  pSysExceptions in 'pSysExceptions.pas',
+  SegMap in 'segmap.pas',
+  Interp_Common in 'Interp_Common.pas',
+  FilerSettingsUnit in 'FilerSettingsUnit.pas',
+  FilerSettingsForm in 'FilerSettingsForm.pas' {frmFilerSettings},
+  WindowsList in 'WindowsList.pas',
+  pCodeDecoderUnit in '..\Debugger\pCodeDecoderUnit.pas',
+  DecodeToMemDumpUnit in '..\Debugger\DecodeToMemDumpUnit.pas',
+  VolumeParams in 'VolumeParams.pas' {frmVolumeParams},
+  pSysVolumesNonStandard in 'pSysVolumesNonStandard.pas',
+  VolConverter in 'VolConverter.pas' {frmVolConverter},
+  DiskFormatUtils in 'DiskFormatUtils.pas',
+  pCodeDecoderII in '..\Debugger\pCodeDecoderII.pas',
+  Interp_Const in 'Interp_Const.pas',
+  CompilerSymbolsIV in 'CompilerSymbolsIV.pas',
+  CompilerSymbolsII in 'CompilerSymbolsII.pas',
+  pCodeDebugger_Decl in '..\Debugger\pCodeDebugger_Decl.pas',
+  pSys_Const in 'pSys_Const.pas',
+  CRTUnit in 'CRTUnit.pas',
+  MiscinfoUnit in 'MiscinfoUnit.pas',
+  InterpII in 'InterpII.pas',
+  LoadVersion in 'LoadVersion.pas' {frmLoadVersion},
+  GetHexAddress in '..\Debugger\GetHexAddress.pas' {frmDecodeWindow},
+  UCSDInterpreter in 'UCSDInterpreter.pas',
+  SelectVersion in 'SelectVersion.pas' {frmSelectVersion},
+  ConverInterpCOps in '..\TESTING\ConverInterpCOps.pas',
+  InterpC in 'InterpC.pas',
+  ProcedureMapping in '..\Debugger\ProcedureMapping.pas',
+  GuessOptions in 'GuessOptions.pas' {frmGuessOptions},
+  CatalogACCDBDatabases in '..\Debugger\CatalogACCDBDatabases.pas' {frmCatalog},
+  CompareVolumes in 'CompareVolumes.pas' {frmCompareVolumes},
+  SyscomEditor in 'SyscomEditor.pas' {frmSyscomSettings},
+  GetStartingAddress in 'GetStartingAddress.pas' {frmGetStartingAddress},
+  pSysDebugWindow in '..\Debugger\pSysDebugWindow.pas' {frmPSysDebugWindow},
+  pSysWindow in 'PSysWindow.pas' {frmPSysWindow},
+  DebuggerSettingsForm in '..\Debugger\DebuggerSettingsForm.pas' {frmDebuggerSettings},
+  DebuggerSettingsUnit in '..\Debugger\DebuggerSettingsUnit.pas',
+  DebuggerDatabasesList in '..\Debugger\DebuggerDatabasesList.pas' {frmDebuggerDatabasesList},
+  VolumesToMount in 'VolumesToMount.pas' {frmVolumesToMount},
+  MyMessages in 'MyMessages.pas',
+  FileNames in 'FileNames.pas',
+  CSVStuff in 'CSVStuff.pas',
+  BuildDebugDB in '..\Debugger\BuildDebugDB.pas' {frmBuildDebugDB},
+  ConfirmDBUpdate in '..\Debugger\ConfirmDBUpdate.pas' {frmUpdateConfirm},
+  YesNoDontAskAgain in '..\..\MyUtils\YesNoDontAskAgain.pas' {frmYesNoDontAskAgain},
+  DBDBParameters in '..\Debugger\DBDBParameters.pas' {frmFileParameters},
+  DecodeRange in '..\Debugger\DecodeRange.pas' {frmDecodeRange};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmFiler, frmFiler);
+  Application.CreateForm(TfrmDecodeRange, frmDecodeRange);
+  Application.Run;
+end.

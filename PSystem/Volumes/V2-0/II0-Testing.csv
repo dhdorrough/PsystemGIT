@@ -1,0 +1,5 @@
+UnitNumber,VolumeName,DOSPathName,ParentUnitNumber,VolStartBlockInParent,NonStandardFormat
+4,"SYSTEM","\\Debian\public\system.vol",0,0
+5,"TESTS2","F:\NDAS-I\d7\Projects\pSystem\Volumes\TESTS2.VOL",0,0
+9,"TESTED2","F:\NDAS-I\d7\Projects\pSystem\Volumes\TESTED2.VOL",0,0
+11,"UCSDII0","F:\NDAS-I\d7\Projects\pSystem\Z80EM2010\UCSDII0.RAW",0,0,Z80 Emulator

@@ -1,0 +1,32 @@
+object TDataBaseSettings
+  DebuggerDatabasesFolder = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\'
+  DataBaseReportsPath = 'F:\NDAS-I\d7\Projects\pSystem\Reports\'
+  RootDBTextBackup = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\'
+  DataBaseList = <
+    item
+      FilePath = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-IV.accdb'
+      VersionNr = vn_VersionIV
+      TextBackupRootPath = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\V-4.0\'
+    end
+    item
+      FilePath = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-IV.12.accdb'
+      VersionNr = vn_VersionIV_12
+      TextBackupRootPath = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\V-4.12\'
+    end
+    item
+      FilePath = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-I-4.accdb'
+      VersionNr = vn_VersionI_4
+      TextBackupRootPath = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\V-I.4\'
+    end
+    item
+      IsActive = True
+      FilePath = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-I-5.accdb'
+      VersionNr = vn_VersionI_5
+      TextBackupRootPath = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\V-1.5\'
+    end
+    item
+      FilePath = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-II.accdb'
+      VersionNr = vn_VersionII
+      TextBackupRootPath = 'F:\NDAS-I\d7\Projects\pSystem\DB Contents\V-2.0\'
+    end>
+end

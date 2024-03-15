@@ -1,0 +1,94 @@
+object TDEBUGGERSettings
+  VersionNr = vn_VersionI_4
+  DatabaseToUse = 'F:\NDAS-I\d7\Projects\pSystem\AccDb\Version-I-4.accdb'
+  ReportsPath = 'F:\ndas-i\d7\Projects\pSystem\Reports\'
+  ListingsPath = 'F:\ndas-i\d7\Projects\pSystem\Listings\CompilerListing.txt'
+  LogFileName = 'F:\ndas-i\d7\Projects\pSystem\Reports\LogFile-Unk.TXT'
+  LastBootedFileName = 'F:\NDAS-I\d7\Projects\pSystem\Z80EM2010\UCSDI4.RAW'
+  LastBootedUnitNr = 4
+  CallHistoryOnly = False
+  MaxHistoryItems = 250
+  BreakList.LogFileName = 'F:\ndas-i\d7\Projects\pSystem\Reports\LOGFILE.LOG'
+  BreakList = <
+    item
+      SegName = 'COMPINIT'
+      Brk = dbBREAK
+      TgtProc = 1
+    end>
+  WatchList = <>
+  WindowsList = <
+    item
+      Top = 170
+      Left = 662
+      Height = 861
+      Width = 1199
+      Name = 'frmPCodeDebugger'
+      LastUpdate = 45351.635205034720000000
+      SplitterPos = 253
+    end
+    item
+      Top = 53
+      Left = -678
+      Height = 847
+      Width = 659
+      Name = 'LOCAL VARIABLES'
+      MonitorNum = 1
+      LastUpdate = 45345.477762071770000000
+      SplitterPos = 313
+    end
+    item
+      Top = 194
+      Left = -633
+      Height = 779
+      Width = 428
+      Name = 'MemDumpDF(770, '#39'f'#39', 0)'
+      MonitorNum = 1
+      LastUpdate = 45345.470140740740000000
+    end
+    item
+      Top = 194
+      Left = -633
+      Height = 490
+      Width = 392
+      Name = 'MemDumpDF(54070, '#39'f'#39', 0)'
+      MonitorNum = 1
+      LastUpdate = 45345.475785416670000000
+    end
+    item
+      Top = 53
+      Left = -1253
+      Height = 962
+      Width = 581
+      Name = 'GLOBAL VARIABLES'
+      MonitorNum = 1
+      LastUpdate = 45345.477784386580000000
+      SplitterPos = 313
+    end
+    item
+      Top = 53
+      Left = -1637
+      Height = 750
+      Width = 390
+      Name = 'MemDumpDF(512, '#39'f'#39', 0)'
+      MonitorNum = 1
+      LastUpdate = 45345.481191909730000000
+    end
+    item
+      Top = 165
+      Left = 2696
+      Height = 581
+      Width = 902
+      Name = 'p-Code debugger Dashboard    1'
+      MonitorNum = 1
+      LastUpdate = 45349.488332164360000000
+    end
+    item
+      Top = 68
+      Left = 2615
+      Height = 445
+      Width = 904
+      Name = 'p-Code debugger Dashboard    0'
+      MonitorNum = 1
+      LastUpdate = 45349.502449131960000000
+    end>
+end

@@ -1,0 +1,1 @@
+IMA Floppy Disk format is: single sided, 8 sectors per track, 40 tracks

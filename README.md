@@ -1,2 +1,2 @@
-# PsystemGIT
- interpreters and debugger
+# PSystem
+The Filer-Debugger is designed to enable access to p-System volumes in multipl formats and to enable high level debugging of p-System programs. Code can either be debugged at the p-Code level or at the Pascal source code level. Code can be single stepped either one p-Code opcode at a time or one source code line at a time. Breakpoints can be set on any p-Code location (and in effect on any source code line). Local and or global variables can be watched. Most different versions of the p-System (VI.4, VI.5, VII, V4.2.2) can be debugged. 

@@ -1,2 +1,0 @@
-# PSystem
- p-System interpreters

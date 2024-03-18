@@ -1183,8 +1183,6 @@ begin
   result := false;
   ch     := KeyInfo.CRTFuncInfo[kf_KeyForBreak].Ch;
   if (TheCh = ch) and (Ch <> #0) then
-
-
     raise EBREAKKEY.Create('Break Key');
 
   // Is there room to put something into the buffer?

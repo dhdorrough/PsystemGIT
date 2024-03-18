@@ -176,7 +176,7 @@ end;
 function TFilerSettings.GetPrinterLfn: string;
 begin
   if Empty(fPrinterLfn) then
-    fPrinterLfn := fReportsPath + 'Printer.txt';
+    fPrinterLfn := ReportsPath + 'Printer.txt';
 
   Result := fPrinterLfn;
 end;
